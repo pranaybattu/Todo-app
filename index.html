@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="app/scss/style.css">
+    <title>Todo-app</title>
+</head>
+<body>
+
+    <div class="header" id="main">
+        
+            <div class="TodoContainer">
+                <div class="TodoHeading">
+                    <div><span style="font-weight: 900; font-family: Verdana, Geneva, Tahoma, sans-serif;"><b>Tasks<b></span><span style="font-weight: 100;"> Lists</span></div>   
+                    <!-- <div class="add_button" onclick="toggle()"><a href="#" ><i class="fa fa-plus-circle" style="font-size:40px; color:red;"></i><span class="hide-for-mobile"> Add List</span></a></div> -->
+                    <div class="add_button" style="display: flex;" onclick="toggle()">
+                        <div class="icon-btn"><div class = "ico-btn__plus"></div></div>
+                        <span class="hide-for-mobile"> Add List</span>
+                    </div>
+                </div>
+                <div class="flex-cards-TodoLists">
+                    <!-- <div class="ListName"></div> -->
+                </div>
+                <!-- <div id='noTodo'>No Items in the todo list</div> -->
+            </div>
+            
+    </div>
+
+
+
+
+    <div class="popup flex-column " id="pop">
+        <div>
+            <p class="add_new_list">Add New List</p>
+        </div>
+        <div>
+            <input type="text" id='ListTitle' placeholder="List Title">
+        </div>
+        <div class="popup_buttons">
+            <button class="add_new_list_button" onclick="AddTodo()">Add</button>
+            <button class="add_new_list_button" onclick="toggle()">Close</button>
+        </div>
+    </div>
+
+    <div class="header2" id="main2" >
+        <div class="tsc_container">
+            <div class="ttl" id="currentHeading">Trip to Paris</div>
+            <div class="back" onclick="goback()">
+                <div class="button"><div class="arrow"></div></div>
+                <div><span class="BackText">Back</span></div>
+            </div>
+            <div class="tsc_ListName">
+                <div class = "card-heading"><span id='currentHeading-1'>Trip To Paris</span><hr></div>
+                <div class = "card-body">
+                    <ul class = "tasks" id='SelectedTodoList_Items' style="list-style-type:none;"></ul>
+                    <div class="footer ">
+                        <!-- <div class = "delete_btn" onclick="removeToDo(this)"><i class="fa fa-trash" aria-hidden="true"></i></div> -->
+                        <div class = "icon-btn " onclick="midFun(this)"><div class = "ico-btn__plus"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popup2 flex-column " id="pop2">
+        <div>
+            <p class="add_new_list">Add New Items</p>
+        </div>
+        <div>
+            <input type="text" id='ItemToAdd' placeholder="Add New Item">
+        </div>
+        <div class="popup_buttons">
+            <button class="add_new_list_button" onclick="AddTodoItem()">Add</button>
+            <button class="add_new_list_button" onclick="toggle2()">Close</button>
+        </div>
+    </div>
+
+
+    <script src="/app/js/script.js"></script>
+</body>
+</html>

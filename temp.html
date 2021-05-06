@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="app/scss/style.css">
+    <title>Todo-app</title>
+</head>
+<body>
+    <div class="header2" id="main2">
+        <div class="tsc_container">
+            <div class="ttl">Trip to Paris</div>
+            <div class="back">
+                <div class="button"><div class="arrow"></div></div>
+                <div><span class="BackText">Back</span></div>
+            </div>
+            <div class="tsc_ListName">
+                <div class = "card-heading"><span>Trip To Paris</span><hr></div>
+                <div class = "card-body">
+                    <ul class = "tasks"></ul>
+                    <div class="footer ">
+                        <!-- <div class = "delete_btn" onclick="removeToDo(this)"><i class="fa fa-trash" aria-hidden="true"></i></div> -->
+                        <div class = "icon-btn " onclick="toggle2()"><div class = "ico-btn__plus"></div></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="popup2 flex-column " id="pop2">
+        <div>
+            <p class="add_new_list">Add New Items</p>
+        </div>
+        <div>
+            <input type="text" id='ListTitle' placeholder="List Title">
+        </div>
+        <div class="popup_buttons">
+            <button class="add_new_list_button" onclick="AddTodo()">Add</button>
+            <button class="add_new_list_button" onclick="toggle2()">Close</button>
+        </div>
+    </div>
+    <script src="/app/js/script.js"></script>
+
+</body>
+</html>

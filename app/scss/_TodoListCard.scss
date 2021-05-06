@@ -1,0 +1,180 @@
+.flex-cards-TodoLists {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    // width: inherit;
+    width: 51.5rem;
+
+    .ListName {
+        padding-top: 30px ;
+        margin-top: 30px;
+        color:rgb(250, 108, 108);
+        font-size: 25px;
+        width: 230px;
+        height: 325px;
+        border: 2px solid rgb(243, 139, 139);
+        border-radius: 3%;
+        box-shadow: 10px 10px 10px lightgrey;
+        // display: flex;
+        // flex-direction: column;
+        background-color: white;
+
+
+        .card-heading {
+            // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            // font-size: 0.7em;
+            // color: #e74c3c;
+            
+            margin-bottom: 0px;
+            padding-left: 42px;
+            position: relative;
+            cursor: pointer;
+        
+            hr {
+                line-height: 0;
+                color: gray;
+                padding-left: inherit;
+            }
+        }
+        
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            width: 230px;
+            height: 265px;
+        }
+
+        .card-item {
+            padding-bottom: 25px;
+            color: black;
+            font-size: 22px;
+            font-weight: 100;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+    .footer {
+        display: flex;
+        position: static;
+        height: 50px;
+        align-items: center;
+        justify-content: end;
+        padding-right: 10px;
+
+        .delete_btn {
+            width: 30px;
+            border-radius: 50%;
+            border: none;
+            color: orangered;
+            padding-right: 10px;
+            cursor: pointer;
+        }
+
+
+        .icon-btn{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            // transition: all .20s cubic-bezier(0.4, 0.0, 0.2, 1);
+            border: 2px solid none; 
+            border-radius: 50%;
+            background-color: orangered;
+        }
+
+
+
+        .ico-btn__plus{
+            width: 16px;
+            height: 2px;
+            background: white;
+            border-radius: 2px;
+            // transition: all .25s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .ico-btn__plus::after{
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 2px;
+            background: white;
+            border-radius: 2px;
+            // transition: all .25s cubic-bezier(0.4, 0.0, 0.2, 1);
+            
+            transform: rotate(90deg);
+        }
+    }
+        
+    }
+
+}
+
+
+
+
+
+
+.tasks {
+    list-style-type:none;
+    height: 240px;
+    margin-top: 25px;
+    margin-bottom: 0;
+    position: relative;
+    
+    overflow-y: auto;
+    scrollbar-width: thin;
+    
+}
+
+
+
+
+@media only screen and (max-width: 37.5rem) {
+    .flex-cards-TodoLists {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        width: inherit;
+
+
+
+        .ListName {
+            width: calc(100% - 2rem);
+            height: 80px;
+            box-shadow: 5px 5px 5px lightgrey;
+            padding-top: 0 ;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border: 1px solid rgb(243, 164, 164);
+            border-radius: 8pt;
+    
+            .card-heading {
+                display: flex;
+                align-content: center;
+                padding-top: 34px;
+                padding-left: 22px;
+                font-size: 20px;
+                color: gray;
+            }
+    
+            .card-body {
+                display: none;
+            }
+        }
+    
+        hr {
+            display: none;
+        }
+    }
+
+
+
+    
+}
