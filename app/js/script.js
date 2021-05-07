@@ -319,9 +319,13 @@ function AddTodoItem() {
 //         *****************Some Small Functions To call the important functions*******************
 
 function ViewTodoList(element) {
+
     flag2 = false;
     currentTodoListId =element.parentNode.parentNode.parentNode.getAttribute("data-key");
+    console.log("ViewTodoList");
+    console.log(currentTodoListId);
     redirect(currentTodoListId);
+    console.log("toggle2");
     toggle2();
 }
 

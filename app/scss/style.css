@@ -516,7 +516,6 @@ body.noscroll {
 
 .header2 .back_mobile {
   display: none;
-  float: left;
 }
 
 .header2 .tsc_container {
@@ -789,10 +788,7 @@ body.noscroll {
             align-items: center;
   }
   .header2 .back_mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: calc(100% - 4rem);
+    display: block;
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;

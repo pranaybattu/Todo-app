@@ -6,7 +6,7 @@
 
     .back_mobile {
         display: none;
-        float: left;
+        
     }
     .tsc_container {
         width: calc(100% - 3px);
@@ -252,8 +252,7 @@
         align-items: center;
     
         .back_mobile {
-            display: flex;
-            width: calc(100% - 4rem);
+            display: block;
             justify-content: left;
             align-items: center;
         }
