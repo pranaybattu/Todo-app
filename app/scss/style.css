@@ -514,6 +514,11 @@ body.noscroll {
           align-items: center;
 }
 
+.header2 .container_heading {
+  float: left;
+  width: calc(100% - 4rem);
+}
+
 .header2 .back_mobile {
   display: none;
 }
@@ -775,7 +780,7 @@ body.noscroll {
 
 @media only screen and (max-width: 37.5rem) {
   .header2 {
-    margin-top: 42px;
+    margin-top: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -786,6 +791,11 @@ body.noscroll {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .header2 .container_heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .header2 .back_mobile {
     display: block;
