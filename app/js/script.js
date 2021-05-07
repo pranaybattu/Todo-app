@@ -121,15 +121,27 @@ function DisplayTodo() {
 
             for (let j = 0; j < currentTodoList.subTask.length; j++) {
                 let classToPut = currentTodoList.subTask[j].marked
-                  ? "card-item "
+                  ? "completed_tasks "
                   : "card-item";
-                // let mark_done_option = currentTodo.subTask[j].marked
-                //   ? ""
-                //   : '<button class = "markDone" onclick="markCompleted(this)">Mark Done</button>';
+
+                  
                 const liNode = document.createElement("li");
                 liNode.setAttribute("class", classToPut);
                 liNode.setAttribute("data-key", currentTodoList.subTask[j].id);
-                liNode.innerHTML = ` ${currentTodoList.subTask[j].name}`;
+                if(!(currentTodoList.subTask[j].marked )) {
+                    liNode.innerHTML = 
+                        `<div style="display: flex; align-content: center;">
+                            <input class="checkbox mark" type="checkbox" onchange='mark(this);'>
+                            <div>${currentTodoList.subTask[j].name}</div>
+                        </div>`;
+                }
+                else {
+                    liNode.innerHTML = 
+                        `<div style="display: flex; align-content: center;">
+                            <input class="checkbox marked" type="checkbox" onchange='mark(this);'>
+                            <div>${currentTodoList.subTask[j].name}</div>
+                        </div>`;
+                }
                 node.childNodes[2].childNodes[1].append(liNode);
             }
         }
@@ -233,16 +245,29 @@ function redirect(id) {
 
     for (let idx = 0; idx < currentTodo.subTask.length; idx++) {
         let classToPut = currentTodo.subTask[idx].marked
-            ? "task_item" : "task_item";
-    //   let rest = currentTodo.subTask[i].marked
-    //     ? ""
-    //     : '<button class = "markDone" onclick="markCompleted(this)">Mark Done</button>';
+            ? "completed_tasks" : "task_item";
 
         const liNode = document.createElement("li");
         liNode.setAttribute("class", classToPut);
         liNode.setAttribute("data-key", currentTodo.subTask[idx].id);
         console.log(currentTodo.subTask[idx].name);
-        liNode.innerHTML = ` <div>${currentTodo.subTask[idx].name}</div>`;
+
+        if(!(currentTodo.subTask[idx].marked )) {
+            liNode.innerHTML = 
+                `<div style="display: flex; align-content: center;">
+                    <input class="checkbox mark" type="checkbox" onchange='mark(this);'>
+                    <div>${currentTodo.subTask[idx].name}</div>
+                </div>`;
+        }
+        else {
+            liNode.innerHTML = 
+                `<div style="display: flex; align-content: center;">
+                    <input class="checkbox marked" type="checkbox" onchange='mark(this);'>
+                    <div>${currentTodo.subTask[idx].name}</div>
+                </div>`;
+        }
+
+
         list.append(liNode);
     }
     
@@ -316,5 +341,38 @@ function midFun(elem) {
     toggle2();  
     redirect(currentTodoListId);
 }
+
+function mark(elem) {
+    let element  = elem.parentNode.parentNode;
+    let listitemId = element.getAttribute("data-key");
+    let CTId;
+    if(mainflag) {
+        CTId =element.parentNode.parentNode.parentNode.getAttribute("data-key");
+    }
+    else {
+        CTId = element.parentNode.parentNode.parentNode.getAttribute("data-key");
+    }
+    console.log("to be marked true");
+    console.log(CTId);
+    console.log(listitemId);
+    for(let idx=0; idx<TodoList.length; idx++) {
+
+        if(TodoList[idx].id==CTId) {
+
+            for(let j=0; j<TodoList[idx].subTask.length; j++) {
+                if(TodoList[idx].subTask[j].id == listitemId) {
+                    TodoList[idx].subTask[j].marked = true ;
+                    break;
+                    console.log("marked true");
+                }
+            }
+            break;
+        }
+    }
+    if(mainflag) DisplayTodo();
+    else redirect(currentTodoListId);
+}
+
+
 
 //         *****************Some Small Functions To call the important functions*******************

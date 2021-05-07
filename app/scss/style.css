@@ -160,7 +160,7 @@ body.noscroll {
 }
 
 .add_new_list_button {
-  background-color: #f3481d;
+  background-color: #e74c3c;
   border: none;
   color: #fff;
   width: 100px;
@@ -170,6 +170,37 @@ body.noscroll {
   text-decoration: none;
   cursor: pointer;
   border-radius: 25px;
+}
+
+.completed_tasks {
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  text-decoration-thickness: 3px;
+  color: red;
+  padding-bottom: 20px;
+  font-size: 23px;
+  font-weight: 500;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.checkbox {
+  margin-right: 10px;
+  font-size: 22px;
+  font-weight: 100;
+}
+
+.checkbox2 {
+  margin-right: 10px;
+  font-size: 22px;
+  font-weight: 100;
+}
+
+.marked {
+  visibility: hidden;
+}
+
+.mark {
+  visibility: visible;
 }
 
 @media (max-width: 63.9375em) {
@@ -233,7 +264,7 @@ body.noscroll {
   cursor: pointer;
   border: 2px solid none;
   border-radius: 50%;
-  background-color: orangered;
+  background-color: #e74c3c;
   margin-right: 16px;
 }
 
@@ -366,7 +397,7 @@ body.noscroll {
   width: 30px;
   border-radius: 50%;
   border: none;
-  color: orangered;
+  color: #e74c3c;
   padding-right: 10px;
   cursor: pointer;
 }
@@ -387,7 +418,7 @@ body.noscroll {
   cursor: pointer;
   border: 2px solid none;
   border-radius: 50%;
-  background-color: orangered;
+  background-color: #e74c3c;
 }
 
 .flex-cards-TodoLists .ListName .footer .ico-btn__plus {
@@ -414,6 +445,7 @@ body.noscroll {
   margin-top: 25px;
   margin-bottom: 0;
   position: relative;
+  padding-left: 10px;
   overflow-y: auto;
   scrollbar-width: thin;
 }
@@ -482,8 +514,13 @@ body.noscroll {
           align-items: center;
 }
 
+.header2 .back_mobile {
+  display: none;
+  float: left;
+}
+
 .header2 .tsc_container {
-  width: 888px;
+  width: calc(100% - 3px);
   height: 760px;
   margin: 0px 271px 50px 281px;
   display: -webkit-box;
@@ -512,6 +549,7 @@ body.noscroll {
   height: 2px;
   background-color: #000;
   margin-bottom: 20px;
+  margin-right: 20px;
   padding-right: 3em;
 }
 
@@ -543,7 +581,7 @@ body.noscroll {
   padding: 1.2rem 0.8rem;
   border: 2px solid none;
   border-radius: 50%;
-  background-color: orangered;
+  background-color: #e74c3c;
   cursor: pointer;
   float: left;
 }
@@ -642,14 +680,28 @@ body.noscroll {
 .header2 .tsc_ListName .card-body .tasks {
   list-style-type: none;
   width: inherit;
+  margin-top: 0;
+  padding-left: 90px;
 }
 
 .header2 .tsc_ListName .card-body .tasks .task_item {
   color: black;
-  padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 15px;
   font-size: 22px;
   font-weight: 100;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header2 .tsc_ListName .card-body .tasks .completed_tasks {
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  text-decoration-thickness: 3px;
+  color: #e74c3c;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  font-size: 23px;
+  font-weight: 500;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -686,7 +738,7 @@ body.noscroll {
   cursor: pointer;
   border: 2px solid none;
   border-radius: 50%;
-  background-color: orangered;
+  background-color: #e74c3c;
 }
 
 .header2 .tsc_ListName .card-body .footer .ico-btn__plus {
@@ -720,5 +772,89 @@ body.noscroll {
   background-color: white;
   -webkit-box-shadow: 10px 10px 10px lightgrey;
           box-shadow: 10px 10px 10px lightgrey;
+}
+
+@media only screen and (max-width: 37.5rem) {
+  .header2 {
+    margin-top: 42px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header2 .back_mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(100% - 4rem);
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header2 .ttl {
+    font-size: 36px;
+    padding-left: 27px;
+  }
+  .header2 .ttl:before {
+    display: none;
+  }
+  .header2 .ttl:after {
+    display: none;
+  }
+  .header2 .back {
+    display: none;
+  }
+  .header2 .tsc_ListName {
+    width: calc(100% - 6rem);
+  }
+  .header2 .tsc_ListName .card-heading {
+    padding-top: 40px;
+    padding-left: 75px;
+    padding-right: 0;
+  }
+  .header2 .tsc_ListName .card-body {
+    width: calc(100% - 0.1rem);
+  }
+  .header2 .tsc_ListName .card-body .tasks {
+    padding-left: 50px;
+  }
+  .header2 .tsc_ListName .card-body .footer {
+    width: calc(100% - 1rem);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: static;
+    height: 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    padding-bottom: 16px;
+  }
+  .popup2 {
+    position: fixed;
+    z-index: 1100;
+    width: calc(100% - 3rem);
+    top: 28%;
+    left: 5%;
+    height: 224px;
+    margin: auto;
+    border: 2px solid #f38b8b;
+    border-radius: 10px;
+    background-color: white;
+    -webkit-box-shadow: 10px 10px 10px lightgrey;
+            box-shadow: 10px 10px 10px lightgrey;
+  }
 }
 /*# sourceMappingURL=style.css.map */

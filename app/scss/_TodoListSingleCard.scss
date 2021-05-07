@@ -4,8 +4,12 @@
     flex-direction: column;
     align-items: center;
 
+    .back_mobile {
+        display: none;
+        float: left;
+    }
     .tsc_container {
-        width: 888px;
+        width: calc(100% - 3px);
         height: 760px;
         margin: 0px 271px 50px 281px;
         display: flex;
@@ -27,6 +31,7 @@
         height: 2px;
         background-color: #000;
         margin-bottom: 20px;
+        margin-right: 20px;
         padding-right: 3em; 
     }
       
@@ -54,7 +59,7 @@
         padding:1.2rem 0.8rem;
         border: 2px solid none; 
         border-radius: 50%;
-        background-color: orangered;
+        background-color: #e74c3c;
         cursor: pointer;
         // transition: $transition/2;
         // margin: 2rem;
@@ -147,16 +152,29 @@
             .tasks {
                 list-style-type:none;
                 width: inherit;
+                margin-top: 0;
+                padding-left: 90px;
                 // height: 220px;
             
                 .task_item {
                     color: black;
-                    padding-top: 20px;
+                    padding-bottom: 20px;
                     padding-left: 15px;
                     font-size: 22px;
                     font-weight: 100;
                     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
                 }
+
+                .completed_tasks {
+                    text-decoration-line: line-through;
+                    text-decoration-thickness: 3px;
+                    color: #e74c3c; 
+                    padding-bottom: 20px;
+                    padding-left: 15px;
+                    font-size: 23px ; 
+                    font-weight: 500;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                  }
             }
 
 
@@ -181,11 +199,9 @@
                     // transition: all .20s cubic-bezier(0.4, 0.0, 0.2, 1);
                     border: 2px solid none; 
                     border-radius: 50%;
-                    background-color: orangered;
+                    background-color: #e74c3c;
                 }
-    
-    
-    
+
                 .ico-btn__plus{
                     width: 16px;
                     height: 2px;
@@ -225,4 +241,86 @@
     border-radius: 10px;
     background-color: white;
     box-shadow: 10px 10px 10px lightgrey;
-  }
+}
+
+
+@media only screen and (max-width: 37.5rem) {
+        .header2 {
+        margin-top: 42px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        .back_mobile {
+            display: flex;
+            width: calc(100% - 4rem);
+            justify-content: left;
+            align-items: center;
+        }
+        
+        .ttl {
+            font-size: 36px;
+            padding-left: 27px;
+        }
+        .ttl:before {
+            display: none;
+        }
+        .ttl:after {
+            display: none;
+        } 
+          
+        .back {
+            display: none;
+        }
+    
+        .tsc_ListName {
+            width: calc(100% - 6rem);
+    
+    
+            .card-heading {
+                padding-top: 40px;
+                padding-left: 75px;
+                padding-right: 0;
+                
+            }
+            
+            .card-body {
+                width: calc(100% - 0.1rem);
+                
+                .tasks {
+                    padding-left: 50px;
+                }
+
+                .footer {
+                    width: calc(100% - 1rem);
+                    display: flex;
+                    position: static;
+                    height: 50px;
+                    align-items: center;
+                    justify-content: end;
+                    // padding-right: 16px;
+                    padding-bottom: 16px;
+                    
+                }
+            }
+                
+        }
+            
+    }
+    
+    .popup2 {
+        position: fixed;
+        z-index: 1100;
+        width: calc(100% - 3rem);
+        top: 28%;
+        left: 5%;   
+        height: 224px;
+        margin: auto;
+        border: 2px solid rgb(243, 139, 139);
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 10px 10px 10px lightgrey;
+    }
+    
+
+}

@@ -66,7 +66,7 @@
             width: 30px;
             border-radius: 50%;
             border: none;
-            color: orangered;
+            color: #e74c3c;
             padding-right: 10px;
             cursor: pointer;
         }
@@ -83,7 +83,7 @@
             // transition: all .20s cubic-bezier(0.4, 0.0, 0.2, 1);
             border: 2px solid none; 
             border-radius: 50%;
-            background-color: orangered;
+            background-color: #e74c3c;
         }
 
 
@@ -124,7 +124,7 @@
     margin-top: 25px;
     margin-bottom: 0;
     position: relative;
-    
+    padding-left: 10px;
     overflow-y: auto;
     scrollbar-width: thin;
     

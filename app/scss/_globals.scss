@@ -74,7 +74,7 @@ body {
 }
 
 .add_new_list_button {
-  background-color:rgb(243, 72, 29);
+  background-color:#e74c3c;
   border: none;
   color: #fff;
   width: 100px;
@@ -87,7 +87,37 @@ body {
 }
 
 
+.completed_tasks {
+  text-decoration-line: line-through;
+  text-decoration-thickness: 3px;
+  color: red; 
+  padding-bottom: 20px;
+  font-size: 23px ; 
+  font-weight: 500;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
+
+.checkbox {
+  margin-right: 10px;
+    font-size: 22px;
+    font-weight: 100;
+}
+
+.checkbox2 {
+  margin-right: 10px;
+    font-size: 22px;
+    font-weight: 100;
+}
+
+.marked {
+  visibility: hidden;
+
+}
+
+.mark {
+  visibility: visible;
+}
 
 
 .hide-for-mobile {

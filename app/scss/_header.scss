@@ -40,7 +40,7 @@
         // transition: all .20s cubic-bezier(0.4, 0.0, 0.2, 1);
         border: 2px solid none; 
         border-radius: 50%;
-        background-color: orangered;
+        background-color: #e74c3c;
         margin-right: 16px;
     }
     
@@ -69,24 +69,6 @@
         user-select: none;
     }
 }
-
-
-// .card-heading::after {
-//     content: "";
-//     position: absolute;
-//     margin-top: 11px;
-//     padding-left: 42px;
-//     border-top-left-radius: 10px;
-//     border-bottom-left-radius: 10px;
-//     background-color: #000000;
-//     position: absolute;
-//     height: 1px;
-//     width: 100%;
-//     top: 30px;
-//     left: 2%;
-//     margin-left: -5px;
-//   }
-
 
 
 @media only screen and (max-width: 37.5rem) {
