@@ -796,6 +796,9 @@ body.noscroll {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    float: left;
+    -ms-flex-line-pack: center;
+        align-content: center;
   }
   .header2 .back_mobile {
     display: block;
